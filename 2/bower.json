@@ -1,0 +1,24 @@
+{
+  "name": "2",
+  "authors": [
+    "A. Matías Quezada <amatiasq@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "phaser": "^2.4.6"
+  },
+  "dependencies": {
+    "phaser": "^2.4.6"
+  }
+}
