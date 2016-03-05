@@ -62,6 +62,7 @@ var GameState = {
     this.player.anchor.setTo(0.5);
     this.player.animations.add('walking', [0,1,2,1], 6, true);
     this.physics.arcade.enable(this.player);
+    this.player.body.collideWorldBounds = true;
     this.player.props = {};
 
     this.camera.follow(this.player);
