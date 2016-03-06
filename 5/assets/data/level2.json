@@ -1,0 +1,169 @@
+{
+  "duration": 35,
+  "enemies": 
+  [
+    {
+      "time": 1,
+      "x": 0.05,
+      "health": 6,
+      "speedX": 20, 
+      "speedY": 50,
+      "key": "yellowEnemy",
+      "scale": 3
+    },
+    {
+      "time": 2,
+      "x": 0.1,
+      "health": 3,
+      "speedX": 50, 
+      "speedY": 50,
+      "key": "yellowEnemy",
+      "scale": 1
+    },
+    {
+      "time": 3,
+      "x": 0.1,
+      "health": 3,
+      "speedX": 50, 
+      "speedY": 50,
+      "key": "yellowEnemy",
+      "scale": 1
+    },
+    {
+      "time": 4,
+      "x": 0.1,
+      "health": 3,
+      "speedX": 50, 
+      "speedY": 50,
+      "key": "yellowEnemy",
+      "scale": 1
+    },
+    {
+      "time": 5,
+      "x": 0.1,
+      "health": 3,
+      "speedX": 50, 
+      "speedY": 50,
+      "key": "yellowEnemy",
+      "scale": 1
+    },
+    {
+      "time": 6,
+      "x": 0.1,
+      "health": 6,
+      "speedX": 50, 
+      "speedY": 50,
+      "key": "yellowEnemy",
+      "scale": 3
+    },
+    {
+      "time": 7,
+      "x": 0.9,
+      "health": 3,
+      "speedX": -50, 
+      "speedY": 50,
+      "key": "redEnemy",
+      "scale": 2
+    },
+    {
+      "time": 8,
+      "x": 0.9,
+      "health": 3,
+      "speedX": -50, 
+      "speedY": 50,
+      "key": "redEnemy",
+      "scale": 1
+    },
+    {
+      "time": 9,
+      "x": 0.9,
+      "health": 3,
+      "speedX": -50, 
+      "speedY": 50,
+      "key": "redEnemy",
+      "scale": 1
+    },
+    {
+      "time": 10,
+      "x": 0.9,
+      "health": 3,
+      "speedX": -50, 
+      "speedY": 50,
+      "key": "redEnemy",
+      "scale": 1
+    },
+    {
+      "time": 11,
+      "x": 0.9,
+      "health": 3,
+      "speedX": -50, 
+      "speedY": 50,
+      "key": "redEnemy",
+      "scale": 1
+    },
+    {
+      "time": 12,
+      "x": 0.9,
+      "health": 6,
+      "speedX": -50, 
+      "speedY": 50,
+      "key": "redEnemy",
+      "scale": 3
+    },
+    {
+      "time": 13,
+      "x": 0.1,
+      "health": 3,
+      "speedX": 100, 
+      "speedY": 20,
+      "key": "yellowEnemy",
+      "scale": 1
+    },
+    {
+      "time": 14,
+      "x": 0.1,
+      "health": 3,
+      "speedX": 100, 
+      "speedY": 20,
+      "key": "yellowEnemy",
+      "scale": 1
+    },
+    {
+      "time": 15,
+      "x": 0.1,
+      "health": 3,
+      "speedX": 100, 
+      "speedY": 20,
+      "key": "yellowEnemy",
+      "scale": 1
+    },
+    {
+      "time": 16,
+      "x": 0.1,
+      "health": 3,
+      "speedX": 100, 
+      "speedY": 20,
+      "key": "yellowEnemy",
+      "scale": 1
+    },
+    {
+      "time": 17,
+      "x": 0.1,
+      "health": 3,
+      "speedX": 100, 
+      "speedY": 20,
+      "key": "yellowEnemy",
+      "scale": 1
+    },
+    {
+      "time": 18,
+      "x": 0.1,
+      "health": 5,
+      "speedX": 100, 
+      "speedY": 40,
+      "key": "yellowEnemy",
+      "scale": 4
+    }
+    
+  ]
+}
