@@ -9,6 +9,7 @@ var GameState = {
     this.BULLET_SPEED = 1000;
     this.levelsCount = 3;
     this.levelIndex = level || 1;
+    this.cursors = this.input.keyboard.createCursorKeys();
     console.log('Running level', this.levelIndex);
   },
 
@@ -58,6 +59,11 @@ var GameState = {
       var targetX = this.input.activePointer.position.x;
       this.player.body.velocity.x = targetX < this.world.centerX ?
         -this.PLAYER_SPEED : this.PLAYER_SPEED;
+    } else {
+      if (this.cursors.left.isDown)
+        this.player.body.velocity.x = -this.PLAYER_SPEED;
+      if (this.cursors.right.isDown)
+        this.player.body.velocity.x = this.PLAYER_SPEED;
     }
   },
 
