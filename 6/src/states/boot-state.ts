@@ -1,12 +1,18 @@
+import {
+  State,
+  ScaleManager,
+  Physics,
+} from 'phaser';
 
-export default new class extends Phaser.State {
+
+export default new class extends State {
 
   init() {
     this.game.stage.backgroundColor = '#fff';
-    this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    this.scale.scaleMode = ScaleManager.SHOW_ALL;
     this.scale.pageAlignHorizontally = true;
     this.scale.pageAlignVertically = true;
-    this.game.physics.startSystem(Phaser.Physics.ARCADE);
+    this.game.physics.startSystem(Physics.ARCADE);
   }
 
   preload() {

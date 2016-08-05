@@ -1,5 +1,7 @@
+import { State } from 'phaser';
 
-export default new class extends Phaser.State {
+
+export default new class extends State {
 
   preload() {
     const preloadBar = this.add.sprite(

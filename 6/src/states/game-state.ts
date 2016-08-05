@@ -1,21 +1,35 @@
+import {
+  State,
+  Group,
+  Sprite,
+  TileSprite,
+  Text,
+  BitmapData,
+  Sound,
+  CursorKeys,
+} from 'phaser';
+
+import Pool from '../prefabs/pool';
 import Platform from '../prefabs/platform';
 const MAX_JUMP_DISTANCE = 120;
 
+var a = 0;
 
-export default new class extends Phaser.State {
 
-  floorPool: Phaser.Group;
-  platformPool: Phaser.Group;
-  coinsPool: Phaser.Group;
-  player: Phaser.Sprite;
-  background : Phaser.TileSprite;
-  water : Phaser.TileSprite;
-  panel : Phaser.Sprite;
+export default new class extends State {
+
+  floorPool: Pool;
+  platformPool: Pool;
+  coinsPool: Pool;
+  player: Sprite;
+  background : TileSprite;
+  water : TileSprite;
+  panel : Sprite;
   currentPlatform: Platform;
-  coinsCountLabel: Phaser.Text;
-  overlay: Phaser.BitmapData;
-  coinSound : Phaser.Sound;
-  cursors: Phaser.CursorKeys;
+  coinsCountLabel: Text;
+  overlay: BitmapData;
+  coinSound : Sound;
+  cursors: CursorKeys;
   isJumping: boolean;
   jumpPeak: boolean;
   myCoins: number;
@@ -23,10 +37,15 @@ export default new class extends Phaser.State {
   levelSpeed: number;
 
   init() {
-    this.floorPool = this.add.group();
-    this.platformPool = this.add.group();
-    this.coinsPool = this.add.group();
+    this.floorPool = new Pool(this.game, () => new Phaser.Sprite(this.game, 0, 0, 'floor'));
+    this.add.existing(this.floorPool);
+
+    this.coinsPool = new Pool(this.game, () => new Phaser.Sprite(this.game, 0, 0, 'coin'));
+    this.add.existing(this.coinsPool);
     this.coinsPool.enableBody = true;
+
+    this.platformPool = new Pool(this.game, () => new Platform(this.game, this.floorPool, this.coinsPool));
+    this.add.existing(this.platformPool);
 
     this.game.physics.arcade.gravity.y = 1000;
     this.cursors = this.game.input.keyboard.createCursorKeys();
@@ -52,7 +71,7 @@ export default new class extends Phaser.State {
     this.player.play('running');
 
     this.currentPlatform = new Platform(this.game, this.floorPool, this.coinsPool);
-    this.currentPlatform.prepare(18, 0, 200, this.levelSpeed);
+    this.currentPlatform.reset(18, 0, 200, this.levelSpeed);
     this.platformPool.add(this.currentPlatform);
 
     this.coinSound = this.add.audio('coin');
@@ -70,11 +89,11 @@ export default new class extends Phaser.State {
      if (!this.player.alive) return;
 
     this.player.x = 50;
-    this.coinsPool.forEachAlive((coin : Phaser.Sprite) => coin.right <= 0 && coin.kill(), this);
+    this.coinsPool.forEachAlive((coin : Sprite) => coin.right <= 0 && coin.kill(), this);
 
     this.platformPool.forEachAlive((platform : Platform) => {
       this.game.physics.arcade.collide(this.player, platform);
-      const lastTile = <Phaser.Sprite>platform.children.slice(-1)[0];
+      const lastTile = <Sprite>platform.children.slice(-1)[0];
 
       if (lastTile && lastTile.right < 0) {
         platform.kill();
@@ -82,7 +101,7 @@ export default new class extends Phaser.State {
       }
     }, this);
 
-    this.game.physics.arcade.overlap(this.player, this.coinsPool, (player, coin) => {
+    this.game.physics.arcade.overlap(this.player, this.coinsPool, (player : Sprite, coin : Sprite) => {
       coin.kill();
       this.myCoins++;
       this.coinsCountLabel.text = this.myCoins.toString()
@@ -94,7 +113,7 @@ export default new class extends Phaser.State {
     else if (this.cursors.up.isUp || this.game.input.activePointer.isDown)
       this.isJumping = false;
 
-    const lastTile = <Phaser.Sprite>this.currentPlatform.children.slice(-1)[0];
+    const lastTile = <Sprite>this.currentPlatform.children.slice(-1)[0];
 
     if (lastTile && lastTile.right < this.game.width)
       this.createPlatform();
@@ -178,12 +197,7 @@ export default new class extends Phaser.State {
 
   createPlatform() {
     const data = this.generateRandomPlatform();
-
-    this.currentPlatform =
-      this.platformPool.getFirstDead() ||
-      new Platform(this.game, this.floorPool, this.coinsPool);
-
-    this.currentPlatform.prepare(
+    this.currentPlatform = this.platformPool.get(
       data.numTiles,
       this.game.width + data.separation,
       data.y,
@@ -210,9 +224,18 @@ export default new class extends Phaser.State {
     return { separation, y, numTiles };
   }
 
-  // render() {
-  //   this.game.debug.body(this.player);
-  //   this.game.debug.bodyInfo(this.player, 0, 30);
-  // }
+  render() {
+    // this.game.debug.body(this.player);
+    // this.game.debug.bodyInfo(this.player, 0, 30);
+
+    if (a % 100 === 0) {
+      console.clear();
+      console.log('Platforms:', this.platformPool.length)
+      console.log('Tiles:', this.floorPool.length)
+      console.log('Coins:', this.coinsPool.length)
+    }
+
+    a++
+  }
 
 };
