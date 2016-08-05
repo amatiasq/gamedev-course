@@ -18,9 +18,9 @@ var a = 0;
 
 export default new class extends State {
 
-  floorPool: Pool;
-  platformPool: Pool;
-  coinsPool: Pool;
+  floorPool: Pool<Sprite>;
+  coinsPool: Pool<Sprite>;
+  platformPool: Pool<Platform>;
   player: Sprite;
   background : TileSprite;
   water : TileSprite;
@@ -37,14 +37,14 @@ export default new class extends State {
   levelSpeed: number;
 
   init() {
-    this.floorPool = new Pool(this.game, () => new Phaser.Sprite(this.game, 0, 0, 'floor'));
+    this.floorPool = new Pool<Sprite>(this.game, () => new Phaser.Sprite(this.game, 0, 0, 'floor'));
     this.add.existing(this.floorPool);
 
-    this.coinsPool = new Pool(this.game, () => new Phaser.Sprite(this.game, 0, 0, 'coin'));
+    this.coinsPool = new Pool<Sprite>(this.game, () => new Phaser.Sprite(this.game, 0, 0, 'coin'));
     this.add.existing(this.coinsPool);
     this.coinsPool.enableBody = true;
 
-    this.platformPool = new Pool(this.game, () => new Platform(this.game, this.floorPool, this.coinsPool));
+    this.platformPool = new Pool<Platform>(this.game, () => new Platform(this.game, this.floorPool, this.coinsPool));
     this.add.existing(this.platformPool);
 
     this.game.physics.arcade.gravity.y = 1000;

@@ -10,14 +10,12 @@ const TILE_SIZE = 40;
 
 export default class Platform extends Group {
 
-  private floorPool: Pool;
-  private coinsPool: Pool;
-
-
-  constructor(game : Game, floorPool : Pool, coinsPool : Pool) {
+  constructor(
+    game : Game,
+    private floorPool : Pool<Sprite>,
+    private coinsPool : Pool<Sprite>
+  ) {
     super(game);
-    this.floorPool = floorPool;
-    this.coinsPool = coinsPool;
     this.enableBody = true;
   }
 

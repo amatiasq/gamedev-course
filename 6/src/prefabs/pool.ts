@@ -1,21 +1,26 @@
 import { Group } from 'phaser';
 
 
-export default class Pool extends Group {
+interface CreatorFunction<T> {
+  () : T;
+}
 
-  private creator : Function;
 
+export default class Pool<T> extends Group {
 
-  constructor(game : Phaser.Game, creator : Function) {
+  constructor(
+    game : Phaser.Game,
+    private creator : CreatorFunction<T>
+  ) {
     super(game);
-    this.creator = creator;
   }
 
 
-  get(...args : any[]) {
+  get(...args : any[]) : T {
     let entity = this.getFirstDead(false) || this.creator();
     entity.reset(...args);
     this.add(entity);
     return entity;
   }
+
 }
