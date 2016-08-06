@@ -1,6 +1,5 @@
 import {
   State,
-  Group,
   Sprite,
   TileSprite,
   Text,
@@ -13,28 +12,27 @@ import Pool from '../prefabs/pool';
 import Platform from '../prefabs/platform';
 const MAX_JUMP_DISTANCE = 120;
 
-var a = 0;
-
 
 export default new class extends State {
 
-  floorPool: Pool<Sprite>;
-  coinsPool: Pool<Sprite>;
-  platformPool: Pool<Platform>;
-  player: Sprite;
-  background : TileSprite;
-  water : TileSprite;
-  panel : Sprite;
-  currentPlatform: Platform;
-  coinsCountLabel: Text;
-  overlay: BitmapData;
-  coinSound : Sound;
-  cursors: CursorKeys;
-  isJumping: boolean;
-  jumpPeak: boolean;
-  myCoins: number;
-  startJumpY: number;
-  levelSpeed: number;
+  private floorPool: Pool<Sprite>;
+  private coinsPool: Pool<Sprite>;
+  private platformPool: Pool<Platform>;
+  private background: TileSprite;
+  private water: TileSprite;
+  private player: Sprite;
+  private panel: Sprite;
+  private currentPlatform: Platform;
+  private coinsCountLabel: Text;
+  private overlay: BitmapData;
+  private coinSound : Sound;
+  private cursors: CursorKeys;
+  private isJumping: boolean;
+  private jumpPeak: boolean;
+  private myCoins: number;
+  private startJumpY: number;
+  private levelSpeed: number;
+
 
   init() {
     this.floorPool = new Pool<Sprite>(this.game, () => new Phaser.Sprite(this.game, 0, 0, 'floor'));
@@ -142,36 +140,7 @@ export default new class extends State {
     gameOverPanel.onComplete.add(() => {
       this.background.stopScroll();
       this.water.stopScroll();
-
-      this.add.text(
-        this.game.width / 2,
-        this.game.height / 2,
-        'GAME OVER',
-        { font: '30px Arial', fill: '#fff' }
-      ).anchor.setTo(0.5);
-
-      const style = { font: '20px Arial', fill: '#fff' };
-
-      this.add.text(
-        this.game.width / 2,
-        this.game.height / 2 + 50,
-        'Hight score:' + highScore,
-        style
-      ).anchor.setTo(0.5);
-
-      this.add.text(
-        this.game.width / 2,
-        this.game.height / 2 + 80,
-        'Your score:' + this.myCoins,
-        style
-      ).anchor.setTo(0.5);
-
-      this.add.text(
-        this.game.width / 2,
-        this.game.height / 2 + 120,
-        'Tap to play again',
-        style
-      ).anchor.setTo(0.5);
+      this.generateGameOverTexts(highScore);
 
       this.game.input.onDown.addOnce(() => this.restart());
     });
@@ -179,7 +148,39 @@ export default new class extends State {
     gameOverPanel.start();
   }
 
-  playerJump() {
+  private generateGameOverTexts(highScore: number) {
+    this.add.text(
+        this.game.width / 2,
+        this.game.height / 2,
+        'GAME OVER',
+        {font: '30px Arial', fill: '#fff'}
+    ).anchor.setTo(0.5);
+
+    const style = {font: '20px Arial', fill: '#fff'};
+
+    this.add.text(
+        this.game.width / 2,
+        this.game.height / 2 + 50,
+        'Hight score:' + highScore,
+        style
+    ).anchor.setTo(0.5);
+
+    this.add.text(
+        this.game.width / 2,
+        this.game.height / 2 + 80,
+        'Your score:' + this.myCoins,
+        style
+    ).anchor.setTo(0.5);
+
+    this.add.text(
+        this.game.width / 2,
+        this.game.height / 2 + 120,
+        'Tap to play again',
+        style
+    ).anchor.setTo(0.5);
+  }
+
+  private playerJump() {
     if (this.player.body.touching.down) {
       this.startJumpY = this.player.y;
       this.isJumping = true;
@@ -195,7 +196,7 @@ export default new class extends State {
     }
   }
 
-  createPlatform() {
+  private createPlatform() {
     const data = this.generateRandomPlatform();
     this.currentPlatform = this.platformPool.get(
       data.numTiles,
@@ -207,7 +208,7 @@ export default new class extends State {
     this.platformPool.add(this.currentPlatform);
   }
 
-  generateRandomPlatform() {
+  private generateRandomPlatform() {
     const minSeparation = 60;
     const maxSeparation = 150;
     const separation = minSeparation + Math.random() * (maxSeparation - minSeparation);
@@ -222,20 +223,6 @@ export default new class extends State {
     const numTiles = minTiles + Math.random() * (maxTiles - minTiles);
 
     return { separation, y, numTiles };
-  }
-
-  render() {
-    // this.game.debug.body(this.player);
-    // this.game.debug.bodyInfo(this.player, 0, 30);
-
-    if (a % 100 === 0) {
-      console.clear();
-      console.log('Platforms:', this.platformPool.length)
-      console.log('Tiles:', this.floorPool.length)
-      console.log('Coins:', this.coinsPool.length)
-    }
-
-    a++
   }
 
 };
