@@ -1,0 +1,77 @@
+{
+  "nextLevel": "level1",
+  "zombies": [
+    {
+      "time": 1,
+      "asset": "zombie",
+      "health": 10,
+      "animationFrames": [0, 1, 2, 1],
+      "attack": 0.1,
+      "velocity": -20
+    },
+    {
+      "time": 1.1,
+      "asset": "zombie",
+      "health": 10,
+      "animationFrames": [0, 1, 2, 1],
+      "attack": 0.1,
+      "velocity": -20
+    },
+    {
+      "time": 2,
+      "asset": "zombie",
+      "health": 10,
+      "animationFrames": [0, 1, 2, 1],
+      "attack": 0.1,
+      "velocity": -20
+    },
+    {
+      "time": 3,
+      "asset": "zombie",
+      "health": 10,
+      "animationFrames": [0, 1, 2, 1],
+      "attack": 0.1,
+      "velocity": -10
+    },
+    {
+      "time": 4,
+      "asset": "chicken",
+      "health": 10,
+      "animationFrames": [0, 1, 2, 1],
+      "attack": 0.1,
+      "velocity": -20
+    },
+    {
+      "time": 5,
+      "asset": "zombie",
+      "health": 10,
+      "animationFrames": [0, 1, 2, 1],
+      "attack": 0.1,
+      "velocity": -20
+    },
+    {
+      "time": 5.1,
+      "asset": "zombie",
+      "health": 10,
+      "animationFrames": [0, 1, 2, 1],
+      "attack": 0.1,
+      "velocity": -20
+    },
+    {
+      "time": 5.2,
+      "asset": "zombie",
+      "health": 10,
+      "animationFrames": [0, 1, 2, 1],
+      "attack": 0.1,
+      "velocity": -20
+    },
+    {
+      "time": 6,
+      "asset": "zombie",
+      "health": 10,
+      "animationFrames": [0, 1, 2, 1],
+      "attack": 0.1,
+      "velocity": -20
+    }
+  ]
+}

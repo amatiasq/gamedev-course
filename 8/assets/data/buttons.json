@@ -1,0 +1,31 @@
+[
+  {
+    "btnAsset": "sunflowerButton",
+    "cost": 75,
+    "plantAsset": "sunflower",
+    "health": 4,
+    "isSunProducer": true
+  },
+  {
+    "btnAsset": "sunflowerButton",
+    "cost": 125,
+    "plantAsset": "sunflower",
+    "health": 20,
+    "isSunProducer": true
+  },
+  {
+    "btnAsset": "plantButton",
+    "cost": 100,
+    "plantAsset": "plant",
+    "health": 10,
+    "isShooter": true,
+    "animationFrames": [1, 2, 1, 0]
+  },
+  {
+    "btnAsset": "chilliButton",
+    "cost": 200,
+    "plantAsset": "chilli",
+    "health": 25,
+    "isShooter": true
+  }
+]
