@@ -1,31 +1,66 @@
 [
   {
-    "btnAsset": "sunflowerButton",
+    "button": "sunflowerButton",
     "cost": 75,
-    "plantAsset": "sunflower",
-    "health": 4,
-    "isSunProducer": true
+    "plant": {
+      "asset": "sunflower",
+      "health": 4,
+      "sunProduction": {
+        "interval": 5,
+        "velocity": 50,
+        "value": 25
+      }
+    }
   },
   {
-    "btnAsset": "sunflowerButton",
+    "button": "sunflowerButton",
     "cost": 125,
-    "plantAsset": "sunflower",
-    "health": 20,
-    "isSunProducer": true
+    "plant": {
+      "asset": "sunflower",
+      "health": 20,
+      "sunProduction": {
+        "interval": 5,
+        "velocity": 50,
+        "value": 50
+      }
+    }
   },
   {
-    "btnAsset": "plantButton",
+    "button": "plantButton",
     "cost": 100,
-    "plantAsset": "plant",
-    "health": 10,
-    "isShooter": true,
-    "animationFrames": [1, 2, 1, 0]
+    "plant": {
+      "asset": "plant",
+      "health": 10,
+      "shoot": {
+        "interval": 1,
+        "velocity": 20,
+        "damage": 1,
+        "animation": [
+          1,
+          2,
+          1,
+          0
+        ]
+      }
+    }
   },
   {
-    "btnAsset": "chilliButton",
+    "button": "chilliButton",
     "cost": 200,
-    "plantAsset": "chilli",
-    "health": 25,
-    "isShooter": true
+    "plant": {
+      "asset": "chilli",
+      "health": 25,
+      "shoot": {
+        "interval": 0.5,
+        "velocity": 20,
+        "damage": 1,
+        "animation": [
+          1,
+          2,
+          1,
+          0
+        ]
+      }
+    }
   }
 ]

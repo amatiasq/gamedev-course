@@ -5,7 +5,7 @@ import {
 } from 'phaser';
 
 
-export default new class BootState extends State {
+export default class BootState extends State {
 
   init() {
     this.game.stage.backgroundColor = '#fff';
