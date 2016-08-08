@@ -37,7 +37,7 @@ export default new class extends State {
 
   create() {
     this.loadLevel();
-    // this.createOnScreenControls();
+    this.createOnScreenControls();
   }
 
 
