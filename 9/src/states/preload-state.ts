@@ -1,6 +1,7 @@
 import {
   State,
   Sprite,
+  Tilemap,
 } from 'phaser';
 
 
@@ -8,7 +9,7 @@ export default class PreloadState extends State {
 
   preload() {
     const world = this.game.world;
-    const preloadBar = this.add.sprite(world.centerX, world.centerY, 'preloadBar');
+    const preloadBar = this.add.sprite(world.centerX, world.centerY, 'bar');
     preloadBar.anchor.set(0.5);
     preloadBar.scale.setTo(100, 1);
     this.load.setPreloadSprite(preloadBar);
@@ -33,7 +34,7 @@ export default class PreloadState extends State {
     this.load.image('tilesheet', 'assets/images/terrains.png');
 
     //load game data
-    this.load.tilemap('map1', 'assets/levels/world.json', null, Phaser.Tilemap.TILED_JSON);
+    this.load.tilemap('map1', 'assets/levels/world.json', null, Tilemap.TILED_JSON);
   }
 
   create() {

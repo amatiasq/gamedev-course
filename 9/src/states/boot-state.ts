@@ -16,7 +16,7 @@ export default class BootState extends State {
   }
 
   preload() {
-    this.load.image('preloadBar', 'assets/images/preloader-bar.png');
+    this.load.image('bar', 'assets/images/preloader-bar.png');
   }
 
   create() {
