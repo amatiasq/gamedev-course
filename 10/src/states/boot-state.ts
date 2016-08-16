@@ -1,8 +1,6 @@
-import {
-  State,
-  Physics,
-  ScaleManager,
-} from 'phaser';
+import State = Phaser.State;
+import ScaleManager = Phaser.ScaleManager;
+import Physics = Phaser.Physics;
 
 
 export default class BootState extends State {
@@ -12,7 +10,7 @@ export default class BootState extends State {
     this.scale.scaleMode = ScaleManager.SHOW_ALL;
     this.scale.pageAlignHorizontally = true;
     this.scale.pageAlignVertically = true;
-    this.game.physics.startSystem(Physics.ARCADE);
+    this.game.physics.startSystem(Physics.P2JS);
   }
 
   preload() {
