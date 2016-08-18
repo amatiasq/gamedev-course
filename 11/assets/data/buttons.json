@@ -1,0 +1,20 @@
+[
+  {
+    "btnAsset": "buttonFactory",
+    "cost": 70,
+    "asset": "factory",
+    "jobs": 4
+  },
+  {
+    "btnAsset": "buttonHouse",
+    "cost": 55,
+    "asset": "house",
+    "housing": 4
+  },
+  {
+    "btnAsset": "buttonFarm",
+    "cost": 35,
+    "asset": "crops",
+    "food": 4
+  }
+]
