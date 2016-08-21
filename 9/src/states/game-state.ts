@@ -43,7 +43,8 @@ export default class GameState extends State {
   create() {
     this.loadLevel();
 
-    this.player = new Player(this, 100, 100, {
+    const playerData = this.findObjectsByType('player', this.map, 'objectsLayer')[0];
+    this.player = new Player(this, playerData.x, playerData.y, {
       items: [],
       health: 25,
       attack: 20,
@@ -123,6 +124,9 @@ export default class GameState extends State {
     player.collectItem(item);
     item.kill();
     this.updateStats();
+
+    if (player.isGameCompleted())
+      this.game.state.start('Game', true, false, 'map2');
   }
 
   private attack(player: Player, enemy: Enemy) {

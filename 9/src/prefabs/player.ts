@@ -42,6 +42,10 @@ export default class Player extends Sprite {
     this.params.gold += item.params.gold ? item.params.gold : 0;
   }
 
+  isGameCompleted() {
+    return this.params.quests.every(quest => quest.isCompleted);
+  }
+
   update() {
     super.update();
     this.refreshHealthBar();

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="26" height="20" tilewidth="40" tileheight="40">
- <tileset firstgid="1" name="terrains" tilewidth="40" tileheight="40">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="40" tileheight="40" nextobjectid="45">
+ <tileset firstgid="1" name="terrains" tilewidth="40" tileheight="40" tilecount="16" columns="8">
   <image source="../images/terrains.png" width="320" height="80"/>
  </tileset>
  <layer name="backgroundLayer" width="26" height="20">
@@ -1051,148 +1051,148 @@
    <tile gid="5"/>
   </data>
  </layer>
- <objectgroup name="objectsLayer" width="26" height="20">
-  <object gid="6" x="548" y="255">
+ <objectgroup name="objectsLayer">
+  <object id="1" gid="6" x="548" y="255" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="4"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="14" x="435" y="147">
+  <object id="2" gid="14" x="435" y="147" width="40" height="40">
    <properties>
     <property name="asset" value="sword"/>
     <property name="attack" value="2"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="15" x="272" y="83">
+  <object id="3" gid="15" x="272" y="83" width="40" height="40">
    <properties>
     <property name="asset" value="chest"/>
     <property name="gold" value="25"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="14" x="94" y="497">
+  <object id="4" gid="14" x="94" y="497" width="40" height="40">
    <properties>
     <property name="asset" value="sword"/>
     <property name="attack" value="2"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="14" x="108" y="748">
+  <object id="5" gid="14" x="108" y="748" width="40" height="40">
    <properties>
     <property name="asset" value="sword"/>
     <property name="attack" value="2"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="14" x="824" y="523">
+  <object id="6" gid="14" x="824" y="523" width="40" height="40">
    <properties>
     <property name="asset" value="sword"/>
     <property name="attack" value="2"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="15" x="805" y="90">
+  <object id="7" gid="15" x="805" y="90" width="40" height="40">
    <properties>
     <property name="asset" value="chest"/>
     <property name="gold" value="25"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="15" x="901" y="691">
+  <object id="8" gid="15" x="901" y="691" width="40" height="40">
    <properties>
     <property name="asset" value="chest"/>
     <property name="gold" value="25"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="15" x="492" y="533">
+  <object id="9" gid="15" x="492" y="533" width="40" height="40">
    <properties>
     <property name="asset" value="chest"/>
     <property name="gold" value="25"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="15" x="50" y="746">
+  <object id="10" gid="15" x="50" y="746" width="40" height="40">
    <properties>
     <property name="asset" value="chest"/>
     <property name="gold" value="25"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="48" y="690">
+  <object id="11" gid="6" x="48" y="690" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="4"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="863" y="89">
+  <object id="12" gid="6" x="863" y="89" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="4"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="939" y="496">
+  <object id="13" gid="6" x="939" y="496" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="4"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="650" y="537">
+  <object id="14" gid="6" x="650" y="537" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="8"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="227" y="482">
+  <object id="15" gid="6" x="227" y="482" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="4"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="423" y="663">
+  <object id="16" gid="6" x="423" y="663" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="4"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="580" y="657">
+  <object id="17" gid="6" x="580" y="657" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="4"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="220" y="282">
+  <object id="18" gid="6" x="220" y="282" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="4"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="266" y="308">
+  <object id="19" gid="6" x="266" y="308" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="4"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="434" y="100">
+  <object id="20" gid="6" x="434" y="100" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="4"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="8" x="79" y="279">
+  <object id="21" gid="8" x="79" y="279" width="40" height="40">
    <properties>
     <property name="asset" value="monster"/>
     <property name="attack" value="8"/>
@@ -1201,7 +1201,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="469" y="298">
+  <object id="22" gid="8" x="469" y="298" width="40" height="40">
    <properties>
     <property name="asset" value="monster"/>
     <property name="attack" value="6"/>
@@ -1210,7 +1210,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="239" y="426">
+  <object id="23" gid="8" x="239" y="426" width="40" height="40">
    <properties>
     <property name="asset" value="monster"/>
     <property name="attack" value="6"/>
@@ -1219,7 +1219,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="161" y="520">
+  <object id="24" gid="8" x="161" y="520" width="40" height="40">
    <properties>
     <property name="asset" value="monster"/>
     <property name="attack" value="15"/>
@@ -1228,7 +1228,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="520" y="601">
+  <object id="25" gid="8" x="520" y="601" width="40" height="40">
    <properties>
     <property name="asset" value="monster"/>
     <property name="attack" value="6"/>
@@ -1237,7 +1237,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="200" y="685">
+  <object id="26" gid="8" x="200" y="685" width="40" height="40">
    <properties>
     <property name="asset" value="snake"/>
     <property name="attack" value="6"/>
@@ -1246,7 +1246,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="364" y="658">
+  <object id="27" gid="8" x="364" y="658" width="40" height="40">
    <properties>
     <property name="asset" value="skeleton"/>
     <property name="attack" value="10"/>
@@ -1255,7 +1255,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="603" y="361">
+  <object id="28" gid="8" x="603" y="361" width="40" height="40">
    <properties>
     <property name="asset" value="dragon"/>
     <property name="attack" value="12"/>
@@ -1264,7 +1264,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="700" y="144">
+  <object id="29" gid="8" x="700" y="144" width="40" height="40">
    <properties>
     <property name="asset" value="snake"/>
     <property name="attack" value="6"/>
@@ -1273,7 +1273,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="866" y="243">
+  <object id="30" gid="8" x="866" y="243" width="40" height="40">
    <properties>
     <property name="asset" value="skeleton"/>
     <property name="attack" value="12"/>
@@ -1282,7 +1282,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="788" y="453">
+  <object id="31" gid="8" x="788" y="453" width="40" height="40">
    <properties>
     <property name="asset" value="snake"/>
     <property name="attack" value="6"/>
@@ -1291,7 +1291,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="960" y="639">
+  <object id="32" gid="8" x="960" y="639" width="40" height="40">
    <properties>
     <property name="asset" value="dragon"/>
     <property name="attack" value="25"/>
@@ -1300,7 +1300,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="8" x="685" y="605">
+  <object id="33" gid="8" x="685" y="605" width="40" height="40">
    <properties>
     <property name="asset" value="monster"/>
     <property name="attack" value="12"/>
@@ -1309,7 +1309,7 @@
     <property name="type" value="enemy"/>
    </properties>
   </object>
-  <object gid="16" x="899" y="745">
+  <object id="34" gid="16" x="899" y="745" width="40" height="40">
    <properties>
     <property name="asset" value="scroll"/>
     <property name="isQuest" value="1"/>
@@ -1317,7 +1317,7 @@
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="16" x="100" y="691">
+  <object id="35" gid="16" x="100" y="691" width="40" height="40">
    <properties>
     <property name="asset" value="strangeItem"/>
     <property name="isQuest" value="1"/>
@@ -1325,60 +1325,65 @@
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="14" x="961" y="130">
+  <object id="36" gid="14" x="961" y="130" width="40" height="40">
    <properties>
     <property name="asset" value="sword"/>
     <property name="attack" value="2"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="962" y="190">
+  <object id="37" gid="6" x="962" y="190" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="8"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="6" x="721" y="219">
+  <object id="38" gid="6" x="721" y="219" width="40" height="40">
    <properties>
     <property name="asset" value="potion"/>
     <property name="health" value="8"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="15" x="221" y="82">
+  <object id="39" gid="15" x="221" y="82" width="40" height="40">
    <properties>
     <property name="asset" value="chest"/>
     <property name="gold" value="25"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="7" x="519" y="657">
+  <object id="40" gid="7" x="519" y="657" width="40" height="40">
    <properties>
     <property name="asset" value="shield"/>
     <property name="defense" value="2"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="7" x="83" y="515">
+  <object id="41" gid="7" x="83" y="515" width="40" height="40">
    <properties>
     <property name="asset" value="shield"/>
     <property name="defense" value="2"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="7" x="782" y="219">
+  <object id="42" gid="7" x="782" y="219" width="40" height="40">
    <properties>
     <property name="asset" value="shield"/>
     <property name="defense" value="2"/>
     <property name="type" value="item"/>
    </properties>
   </object>
-  <object gid="7" x="753" y="92">
+  <object id="43" gid="7" x="753" y="92" width="40" height="40">
    <properties>
     <property name="asset" value="shield"/>
     <property name="defense" value="2"/>
     <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="44" gid="8" x="78.6667" y="154.667" width="40" height="40">
+   <properties>
+    <property name="type" value="player"/>
    </properties>
   </object>
  </objectgroup>

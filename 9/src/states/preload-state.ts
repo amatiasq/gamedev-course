@@ -35,6 +35,7 @@ export default class PreloadState extends State {
 
     //load game data
     this.load.tilemap('map1', 'assets/levels/world.json', null, Tilemap.TILED_JSON);
+    this.load.tilemap('map2', 'assets/levels/world2.json', null, Tilemap.TILED_JSON);
   }
 
   create() {

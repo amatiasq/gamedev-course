@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="35" height="35" tilewidth="35" tileheight="35" nextobjectid="39">
+ <tileset firstgid="1" name="terrains" tilewidth="40" tileheight="40" tilecount="16" columns="8">
+  <image source="../images/terrains.png" trans="ff00ff" width="320" height="80"/>
+  <tile id="14">
+   <properties>
+    <property name="asset" value="sword"/>
+    <property name="attack" value="2"/>
+    <property name="type" value="item"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="backgroundLayer" width="35" height="35">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer name="collisionLayer" width="35" height="35">
+  <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5,0,0,5,
+5,0,0,0,0,5,5,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5,0,0,5,
+5,0,0,0,0,5,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5,0,0,5,
+5,0,0,0,0,5,0,5,5,0,5,5,5,5,5,5,0,0,0,0,0,0,0,0,5,5,5,5,5,5,0,5,0,0,5,
+5,0,0,0,0,5,0,5,5,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,5,0,0,5,
+5,0,0,0,0,5,0,5,5,5,0,5,5,5,5,5,0,0,0,0,0,0,0,0,5,0,5,5,5,5,5,5,0,0,5,
+5,0,0,0,0,5,0,5,0,5,0,5,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5,0,0,0,0,0,0,0,5,
+5,0,0,0,0,5,0,5,0,5,0,5,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5,5,5,5,5,0,0,0,5,
+5,0,0,0,0,5,0,5,0,5,0,5,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,5,0,0,0,5,
+5,0,0,0,0,5,0,5,0,5,0,5,5,5,5,5,5,5,5,0,0,0,0,0,5,5,4,5,5,0,5,0,0,0,5,
+5,0,0,0,5,5,0,5,0,5,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,4,4,4,5,0,5,5,0,0,5,
+5,0,0,5,5,0,0,5,0,5,5,5,5,5,5,5,5,0,5,0,0,0,0,0,0,4,4,4,5,0,0,5,0,0,5,
+5,0,0,5,0,0,5,5,0,0,0,0,0,0,0,0,5,0,5,5,5,5,5,0,5,4,4,4,5,0,0,5,0,0,5,
+5,0,0,5,5,0,5,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,5,4,4,4,5,0,0,5,0,0,5,
+5,0,0,0,5,0,5,5,5,5,5,5,0,0,0,0,5,5,5,5,5,5,5,0,5,4,4,5,0,0,0,5,0,0,5,
+5,0,0,5,5,0,0,0,0,0,0,5,5,5,12,12,12,12,12,12,0,0,5,0,5,4,4,5,0,5,0,0,5,0,5,
+5,0,5,5,0,0,0,0,0,0,0,0,0,5,13,2,2,2,2,12,0,0,5,0,5,5,5,5,0,5,5,0,5,0,5,
+5,0,5,0,0,10,10,10,10,10,10,0,0,5,13,2,2,2,2,12,0,0,5,0,0,0,0,0,0,5,5,0,5,0,5,
+5,5,5,0,0,10,11,11,11,11,10,0,0,5,13,2,2,2,2,12,0,0,5,5,5,5,5,0,5,5,5,0,5,0,5,
+5,5,0,0,0,10,11,11,11,11,10,0,0,5,13,13,13,13,13,13,0,5,5,0,0,0,0,0,5,0,5,0,5,0,5,
+5,5,0,0,0,10,11,11,11,11,10,0,0,5,5,0,0,0,0,0,0,5,0,0,0,5,5,5,5,0,5,0,5,0,5,
+5,5,0,0,0,10,10,10,10,10,10,0,0,0,5,0,0,0,0,0,0,5,0,5,5,5,0,0,0,0,5,0,5,0,5,
+5,5,0,0,0,0,0,0,0,0,0,0,0,0,5,5,5,0,0,0,0,5,0,5,0,0,0,0,0,0,5,0,5,0,5,
+5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,5,0,5,5,5,5,5,5,5,5,0,5,0,5,
+5,5,0,0,0,0,0,0,0,0,5,5,5,5,0,0,5,0,0,0,0,5,0,0,0,0,0,0,0,5,5,0,5,0,5,
+5,5,5,5,5,0,0,0,0,0,5,0,0,5,0,5,5,0,0,0,0,5,5,5,5,5,5,5,0,5,5,0,5,0,5,
+5,0,0,0,5,5,5,5,5,0,5,0,0,5,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,5,5,0,5,0,5,
+5,0,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,0,0,0,0,0,0,0,0,0,0,5,0,5,5,0,5,0,5,
+5,0,5,0,0,0,0,0,0,0,0,0,5,5,0,0,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,0,5,0,5,
+5,0,5,0,0,0,0,0,0,0,0,0,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,5,0,5,0,5,
+5,0,5,0,0,0,0,0,0,0,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,0,5,
+5,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5,
+5,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+ </layer>
+ <objectgroup name="objectsLayer">
+  <object id="2" gid="6" x="632" y="192" width="40" height="40">
+   <properties>
+    <property name="asset" value="potion"/>
+    <property name="health" value="5"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="3" gid="7" x="728" y="398" width="40" height="40">
+   <properties>
+    <property name="asset" value="shield"/>
+    <property name="defense" value="3"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="4" gid="14" x="650" y="294" width="40" height="40"/>
+  <object id="5" gid="15" x="762" y="288" width="40" height="40">
+   <properties>
+    <property name="asset" value="chest"/>
+    <property name="gold" value="25"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="9" gid="14" x="134" y="1182" width="40" height="40"/>
+  <object id="10" gid="15" x="762" y="288" width="40" height="40">
+   <properties>
+    <property name="asset" value="chest"/>
+    <property name="gold" value="25"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="11" gid="7" x="314" y="982" width="40" height="40">
+   <properties>
+    <property name="asset" value="shield"/>
+    <property name="defense" value="3"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="12" gid="6" x="178" y="878" width="40" height="40">
+   <properties>
+    <property name="asset" value="potion"/>
+    <property name="health" value="5"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="13" gid="6" x="76" y="778" width="40" height="40">
+   <properties>
+    <property name="asset" value="potion"/>
+    <property name="health" value="5"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="14" gid="6" x="114" y="666" width="40" height="40">
+   <properties>
+    <property name="asset" value="potion"/>
+    <property name="health" value="5"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="15" gid="15" x="762" y="288" width="40" height="40">
+   <properties>
+    <property name="asset" value="chest"/>
+    <property name="gold" value="25"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="16" gid="15" x="1058" y="596" width="40" height="40">
+   <properties>
+    <property name="asset" value="chest"/>
+    <property name="gold" value="25"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="17" gid="14" x="144" y="492" width="40" height="40"/>
+  <object id="18" gid="6" x="320" y="204" width="40" height="40">
+   <properties>
+    <property name="asset" value="potion"/>
+    <property name="health" value="5"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="19" gid="7" x="202" y="920" width="40" height="40">
+   <properties>
+    <property name="asset" value="shield"/>
+    <property name="defense" value="3"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="20" gid="6" x="252" y="1142" width="40" height="40">
+   <properties>
+    <property name="asset" value="potion"/>
+    <property name="health" value="5"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="21" gid="7" x="130" y="1088" width="40" height="40">
+   <properties>
+    <property name="asset" value="shield"/>
+    <property name="defense" value="3"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="22" gid="15" x="518" y="1052" width="40" height="40">
+   <properties>
+    <property name="asset" value="chest"/>
+    <property name="gold" value="25"/>
+    <property name="type" value="item"/>
+   </properties>
+  </object>
+  <object id="24" gid="8" x="418" y="108" width="40" height="40">
+   <properties>
+    <property name="asset" value="dragon"/>
+    <property name="attack" value="5"/>
+    <property name="defense" value="5"/>
+    <property name="health" value="10"/>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="25" gid="8" x="1040" y="522" width="40" height="40">
+   <properties>
+    <property name="asset" value="skeleton"/>
+    <property name="attack" value="5"/>
+    <property name="defense" value="5"/>
+    <property name="health" value="1"/>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="26" gid="8" x="558" y="106" width="40" height="40">
+   <properties>
+    <property name="asset" value="monster"/>
+    <property name="attack" value="5"/>
+    <property name="defense" value=""/>
+    <property name="health" value="20"/>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="27" gid="8" x="624" y="108" width="40" height="40">
+   <properties>
+    <property name="asset" value="snake"/>
+    <property name="attack" value="5"/>
+    <property name="defense" value="5"/>
+    <property name="health" value="20"/>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="29" gid="8" x="426" y="1168" width="40" height="40">
+   <properties>
+    <property name="asset" value="monster"/>
+    <property name="attack" value="5"/>
+    <property name="defense" value="5"/>
+    <property name="health" value="13"/>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="31" gid="8" x="416" y="414" width="40" height="40">
+   <properties>
+    <property name="asset" value="snake"/>
+    <property name="attack" value="5"/>
+    <property name="defense" value="5"/>
+    <property name="health" value="2"/>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="33" gid="8" x="898" y="982" width="40" height="40">
+   <properties>
+    <property name="asset" value="dragon"/>
+    <property name="attack" value="5"/>
+    <property name="defense" value="5"/>
+    <property name="health" value="10"/>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="34" gid="8" x="1158" y="974" width="40" height="40">
+   <properties>
+    <property name="asset" value="skeleton"/>
+    <property name="attack" value="5"/>
+    <property name="defense" value="5"/>
+    <property name="health" value="1"/>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="35" gid="8" x="468" y="880" width="40" height="40">
+   <properties>
+    <property name="asset" value="dragon"/>
+    <property name="attack" value="5"/>
+    <property name="defense" value="5"/>
+    <property name="health" value="20"/>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="36" gid="8" x="1050" y="86" width="40" height="40">
+   <properties>
+    <property name="type" value="player"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
