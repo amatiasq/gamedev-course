@@ -1,0 +1,27 @@
+{
+  "background": "bedroom",
+  "things": [
+    {
+      "asset": "chair",
+      "text": "Just a chair, used to sit down",
+      "x": 500,
+      "y": 150,
+      "type": "inanimated"
+    },
+    {
+      "asset": "gem",
+      "text": "Yay! I found a gem",
+      "x": 200,
+      "y": 200,
+      "type": "collectable",
+      "id": "gem"
+    },
+    {
+      "asset": "medal",
+      "text": "This is nice medal to steal",
+      "x": 120,
+      "y": 180,
+      "type": "collectable"
+    }
+  ]
+}
