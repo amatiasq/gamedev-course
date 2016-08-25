@@ -1,0 +1,34 @@
+[
+  {
+    "asset": "sacredWarrior",
+    "attack": 14,
+    "defense": 6,
+    "health": 40,
+    "row": 0,
+    "col": 1
+  },
+  {
+    "asset": "warrior",
+    "attack": 10,
+    "defense": 5,
+    "health": 20,
+    "row": 1,
+    "col": 2
+  },
+  {
+    "asset": "warrior",
+    "attack": 10,
+    "defense": 5,
+    "health": 20,
+    "row": 1,
+    "col": 0
+  },
+  {
+    "asset": "wolf",
+    "attack": 12,
+    "defense": 4,
+    "health": 18,
+    "row": 5,
+    "col": 2
+  }
+]

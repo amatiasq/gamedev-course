@@ -1,0 +1,66 @@
+[
+  {
+    "asset": "orc",
+    "attack": 9,
+    "defense": 6,
+    "health": 8,
+    "row": 0,
+    "col": 7
+  },
+  {
+    "asset": "orc",
+    "attack": 9,
+    "defense": 6,
+    "health": 8,
+    "row": 1,
+    "col": 7
+  },
+  {
+    "asset": "orc",
+    "attack": 9,
+    "defense": 6,
+    "health": 8,
+    "row": 2,
+    "col": 7
+  },
+  {
+    "asset": "orc",
+    "attack": 9,
+    "defense": 6,
+    "health": 8,
+    "row": 4,
+    "col": 7
+  },
+  {
+    "asset": "orc",
+    "attack": 9,
+    "defense": 6,
+    "health": 8,
+    "row": 5,
+    "col": 7
+  },
+  {
+    "asset": "ogre",
+    "attack": 15,
+    "defense": 6,
+    "health": 20,
+    "row": 3,
+    "col": 7
+  },
+  {
+    "asset": "ogre",
+    "attack": 15,
+    "defense": 6,
+    "health": 20,
+    "row": 2,
+    "col": 5
+  },
+  {
+    "asset": "ogre",
+    "attack": 15,
+    "defense": 6,
+    "health": 20,
+    "row": 3,
+    "col": 4
+  }
+]
